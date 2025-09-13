@@ -19,3 +19,6 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# 忽略子模块的修改（防止意外推送到子模块主分支）
+src/content/docs/tondi-standard-proposal/

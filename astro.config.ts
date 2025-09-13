@@ -35,6 +35,10 @@ export default defineConfig({
                     label: "Reference",
                     autogenerate: { directory: "reference" },
                 },
+                {
+                    label: "Tondi Standard Proposals",
+                    autogenerate: { directory: "tondi-standard-proposal" },
+                },
             ],
         }),
     ],
