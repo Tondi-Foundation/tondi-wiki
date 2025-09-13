@@ -1,0 +1,3 @@
+[submodule "src/content/docs/tondi-standard-proposal"]
+	path = src/content/docs/tondi-standard-proposal
+	url = https://github.com/Tondi-Foundation/Tondi-Standard-Proposal.git
