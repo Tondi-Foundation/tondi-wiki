@@ -9,6 +9,9 @@ const { PUBLIC_SITE_URL, GITHUB_REPO_URL } = loadEnv(process.env.NODE_ENV!, proc
 
 // https://astro.build/config
 export default defineConfig({
+    redirects: {
+        '/': '/guides/intro',
+    },
     site: PUBLIC_SITE_URL!,
     output: "static",
     prefetch: {
