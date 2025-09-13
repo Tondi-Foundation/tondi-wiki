@@ -5,6 +5,7 @@
 html,
 body {
 	font-size: clamp(1rem, 1vw, 2rem);
+	@apply bg-white dark:bg-gray-950;
 
 	@media (prefers-color-scheme: dark) {
 		color-scheme: dark;
@@ -127,4 +128,23 @@ body {
 	body {
 		@apply bg-background text-foreground;
 	}
+}
+
+/* Tondi-landing inspired background styles */
+.tondi-background {
+	position: relative;
+}
+
+.tondi-background::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-size: 20px 20px;
+	background-image: radial-gradient(#FCF8E8 3px, transparent 1px);
+	pointer-events: none;
+	z-index: -1;
+}
+
+.dark .tondi-background::before {
+	background-image: radial-gradient(#404040 1px, transparent 1px);
 }
