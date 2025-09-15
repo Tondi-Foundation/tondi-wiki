@@ -1,4 +1,5 @@
 # build output
+.pnpm-store
 dist/
 # generated types
 .astro/
