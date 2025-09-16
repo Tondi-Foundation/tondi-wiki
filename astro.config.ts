@@ -26,14 +26,14 @@ export default defineConfig({
             social: [{ icon: "github", label: "GitHub", href: GITHUB_REPO_URL! }],
             sidebar: [
                 {
-                    label: "Guides",
+                    label: "📚 Guides",
                     items: [
                         { label: "Intro", slug: "guides/intro" },
                         { label: "Timeline", slug: "guides/timeline" },
                     ],
                 },
                 {
-                    label: "Whitepaper",
+                    label: "📄 Whitepaper",
                     items: [
                         { label: "I. Project Overview", slug: "whitepaper/01-overview" },
                         { label: "II. Layer 2: RGB on Tondi", slug: "whitepaper/02-layer2-rgb-on-tondi" },
@@ -47,7 +47,7 @@ export default defineConfig({
                     ],
                 },
                 {
-                    label: "Tondi Standard Proposals",
+                    label: "📋 Tondi Standard Proposals",
                     autogenerate: { directory: "tondi-standard-proposal" },
                 },
             ],
@@ -62,13 +62,13 @@ export default defineConfig({
                             content: '';
                             position: absolute;
                             inset: 0;
-                            background-size: 20px 20px;
-                            background-image: radial-gradient(#FCF8E8 3px, transparent 1px);
+                            background-size: 16px 16px;
+                            background-image: radial-gradient(#FCF8E8 2.4px, transparent 0.8px);
                             pointer-events: none;
                             z-index: -1;
                         }
                         [data-theme="dark"] body::before {
-                            background-image: radial-gradient(#404040 1px, transparent 1px);
+                            background-image: radial-gradient(#1a1a1a 0.8px, transparent 0.8px);
                         }
                         
                         /* Tondi-landing inspired color scheme */
@@ -175,6 +175,15 @@ export default defineConfig({
                         .sl-sidebar {
                             width: 320px !important;
                             min-width: 320px !important;
+                        }
+                        
+                        /* Make sidebar darker in dark mode */
+                        [data-theme="dark"] .sl-sidebar {
+                            background-color: oklch(0.05 0 0) !important;
+                        }
+                        
+                        [data-theme="dark"] .sl-sidebar-content {
+                            background-color: oklch(0.05 0 0) !important;
                         }
                         
                         /* Adjust main content area to accommodate wider sidebar */
