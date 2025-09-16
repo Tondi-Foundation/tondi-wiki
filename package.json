@@ -8,10 +8,7 @@
 		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"astro": "astro",
-		"frontmatter": "python3 scripts/add-frontmatter.py",
-		"sync-tsp": "./scripts/safe-sync-tsp.sh",
-		"sync-tsp-unsafe": "git submodule update --remote src/content/docs/tondi-standard-proposal && pnpm frontmatter"
+		"astro": "astro"
 	},
 	"dependencies": {
 		"@astrojs/sitemap": "^3.5.1",
