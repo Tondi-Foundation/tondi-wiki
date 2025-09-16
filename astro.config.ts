@@ -29,6 +29,7 @@ export default defineConfig({
                     label: "Guides",
                     items: [
                         { label: "Intro", slug: "guides/intro" },
+                        { label: "Timeline", slug: "guides/timeline" },
                     ],
                 },
                 {
