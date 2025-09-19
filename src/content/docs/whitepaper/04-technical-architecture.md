@@ -13,8 +13,8 @@ Tondi is a reference project for next-generation PoW settlement chains, combinin
 | **Hashing** | Blake3, far superior to SHA256, SIMD support |
 | **UTXO Model** | BTC-homomorphic, P2TR supported |
 | **Signatures** | Schnorr batch signatures + parallel verification |
-| **Block frequency** | Dynamic ≥10 blocks/sec, auto-adjust |
-| **Transaction processing** | Parallel mempool ordering & validation, supports 10k+ TPS |
+| **Block frequency** | Dynamic ≥10 blocks/sec, auto-adjust|
+| **Transaction processing** | Parallel mempool ordering & validation, supports 10k+ TPS|
 
 ## Performance Characteristics
 
