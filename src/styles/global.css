@@ -652,8 +652,8 @@ body {
 .dark h4,
 .dark h5,
 .dark h6 {
-	color: #facc15 !important;
-	text-shadow: 0 0 8px rgba(250, 204, 21, 0.3) !important;
+	color: #fde047 !important;
+	text-shadow: 0 0 8px rgba(253, 224, 71, 0.3) !important;
 }
 
 .dark h1:hover,
@@ -662,7 +662,7 @@ body {
 .dark h4:hover,
 .dark h5:hover,
 .dark h6:hover {
-	text-shadow: 0 0 12px rgba(250, 204, 21, 0.5) !important;
+	text-shadow: 0 0 12px rgba(253, 224, 71, 0.5) !important;
 }
 
 @keyframes cyberPulseDark {
@@ -677,12 +677,14 @@ body {
 /* Enhanced table styling for consistent appearance */
 table {
 	width: 100% !important;
+	max-width: 100% !important;
 	table-layout: auto !important;
 	border-collapse: collapse !important;
 	margin: 1.5rem 0 !important;
 	border: 1px solid var(--cyber-border) !important;
 	box-shadow: var(--cyber-glow) !important;
 	display: table !important;
+	overflow-x: auto !important;
 }
 
 table th {

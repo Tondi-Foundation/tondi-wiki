@@ -302,8 +302,8 @@ export default defineConfig({
                         [data-theme="dark"] .sl-markdown-content h4,
                         [data-theme="dark"] .sl-markdown-content h5,
                         [data-theme="dark"] .sl-markdown-content h6 {
-                            color: #facc15 !important;
-                            text-shadow: 0 0 8px rgba(250, 204, 21, 0.3) !important;
+                            color: #fde047 !important;
+                            text-shadow: 0 0 8px rgba(253, 224, 71, 0.3) !important;
                         }
                         
                         [data-theme="dark"] .sl-markdown-content h1:hover,
@@ -312,18 +312,20 @@ export default defineConfig({
                         [data-theme="dark"] .sl-markdown-content h4:hover,
                         [data-theme="dark"] .sl-markdown-content h5:hover,
                         [data-theme="dark"] .sl-markdown-content h6:hover {
-                            text-shadow: 0 0 12px rgba(250, 204, 21, 0.5) !important;
+                            text-shadow: 0 0 12px rgba(253, 224, 71, 0.5) !important;
                         }
                         
                         /* Enhanced table styling for consistent appearance */
                         .sl-markdown-content table {
                             width: 100% !important;
+                            max-width: 100% !important;
                             table-layout: auto !important;
                             border-collapse: collapse !important;
                             margin: 1.5rem 0 !important;
                             border: 1px solid var(--cyber-border) !important;
                             box-shadow: var(--cyber-glow) !important;
                             display: table !important;
+                            overflow-x: auto !important;
                         }
                         
                         .sl-markdown-content table th {
