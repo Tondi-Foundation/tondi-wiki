@@ -350,30 +350,38 @@ export default defineConfig({
                         
                         /* Enhanced table styling for consistent appearance */
                         .sl-markdown-content {
-                            overflow-x: auto !important;
+                            overflow-x: visible !important;
                             overflow-y: visible !important;
                         }
                         
-                        /* Prevent vertical scrolling on headings */
-                        .sl-markdown-content h1,
-                        .sl-markdown-content h2,
-                        .sl-markdown-content h3,
-                        .sl-markdown-content h4,
-                        .sl-markdown-content h5,
-                        .sl-markdown-content h6 {
-                            overflow: visible !important;
+                        /* Table-specific horizontal scroll */
+                        .sl-markdown-content table {
+                            overflow-x: auto !important;
+                            display: block !important;
+                            width: 100% !important;
+                            white-space: nowrap !important;
+                        }
+                        
+                        .sl-markdown-content table thead,
+                        .sl-markdown-content table tbody,
+                        .sl-markdown-content table tr {
+                            display: table !important;
+                            width: 100% !important;
+                            table-layout: auto !important;
+                        }
+                        
+                        .sl-markdown-content table th,
+                        .sl-markdown-content table td {
+                            display: table-cell !important;
                             white-space: normal !important;
+                            min-width: 120px !important;
                         }
                         
                         .sl-markdown-content table {
-                            width: auto !important;
-                            min-width: 100% !important;
-                            table-layout: auto !important;
                             border-collapse: collapse !important;
                             margin: 1.5rem 0 !important;
                             border: 1px solid var(--cyber-border) !important;
                             box-shadow: var(--cyber-glow) !important;
-                            display: table !important;
                         }
                         
                         .sl-markdown-content table th {

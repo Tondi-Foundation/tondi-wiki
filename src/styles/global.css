@@ -713,20 +713,29 @@ body {
 
 /* Enhanced table styling for consistent appearance */
 table {
-	width: auto !important;
-	min-width: 100% !important;
-	table-layout: auto !important;
+	overflow-x: auto !important;
+	display: block !important;
+	width: 100% !important;
+	white-space: nowrap !important;
 	border-collapse: collapse !important;
 	margin: 1.5rem 0 !important;
 	border: 1px solid var(--cyber-border) !important;
 	box-shadow: var(--cyber-glow) !important;
-	display: table !important;
 }
 
-/* Prevent vertical scrolling on headings */
-h1, h2, h3, h4, h5, h6 {
-	overflow: visible !important;
+table thead,
+table tbody,
+table tr {
+	display: table !important;
+	width: 100% !important;
+	table-layout: auto !important;
+}
+
+table th,
+table td {
+	display: table-cell !important;
 	white-space: normal !important;
+	min-width: 120px !important;
 }
 
 /* Table container with horizontal scroll */
