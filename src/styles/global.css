@@ -674,6 +674,22 @@ body {
 	}
 }
 
+/* Expand text content area */
+.sl-markdown-content {
+	max-width: none !important;
+	padding: 0 2rem !important;
+}
+
+.sl-main-pane {
+	max-width: none !important;
+	padding: 0 2rem !important;
+}
+
+.sl-main-pane .sl-markdown-content {
+	max-width: none !important;
+	padding: 0 !important;
+}
+
 /* Enhanced table styling for consistent appearance */
 table {
 	width: auto !important;

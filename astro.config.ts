@@ -223,6 +223,19 @@ export default defineConfig({
                         /* Enhanced Starlight components with cyber styling */
                         .sl-markdown-content {
                             position: relative;
+                            max-width: none !important;
+                            padding: 0 2rem !important;
+                        }
+                        
+                        /* Expand main content area */
+                        .sl-main-pane {
+                            max-width: none !important;
+                            padding: 0 2rem !important;
+                        }
+                        
+                        .sl-main-pane .sl-markdown-content {
+                            max-width: none !important;
+                            padding: 0 !important;
                         }
                         
                         .sl-markdown-content::before {
