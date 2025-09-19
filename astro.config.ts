@@ -23,6 +23,7 @@ export default defineConfig({
         compressor(),
         starlight({
             title: "Wiki",
+            defaultColorScheme: "dark",
             social: [{ icon: "github", label: "GitHub", href: GITHUB_REPO_URL! }],
             sidebar: [
                 {
@@ -58,34 +59,12 @@ export default defineConfig({
                         body {
                             position: relative;
                         }
-                        body::before {
-                            content: '';
-                            position: absolute;
-                            inset: 0;
-                            background-size: 16px 16px;
-                            background-image: radial-gradient(#FCF8E8 2.4px, transparent 0.8px);
-                            pointer-events: none;
-                            z-index: -1;
-                        }
+                        /* Light mode background removed */
                         [data-theme="dark"] body::before {
                             background-image: radial-gradient(#1a1a1a 0.8px, transparent 0.8px);
                         }
                         
-                        /* Tondi-landing inspired color scheme */
-                        :root {
-                            --sl-color-accent-low: oklch(0.95 0.05 93.6deg);
-                            --sl-color-accent: oklch(0.877 0.166 93.6deg);
-                            --sl-color-accent-high: oklch(0.3 0.1 93.6deg);
-                            --sl-color-accent-text: oklch(0.1 0.05 93.6deg);
-                            
-                            --sl-color-primary: oklch(0.877 0.166 93.6deg);
-                            --sl-color-primary-high: oklch(0.3 0.1 93.6deg);
-                            --sl-color-primary-low: oklch(0.95 0.05 93.6deg);
-                            --sl-color-primary-text: oklch(0.1 0.05 93.6deg);
-                            
-                            --sl-color-accent-hover: oklch(0.8 0.15 93.6deg);
-                            --sl-color-accent-active: oklch(0.7 0.2 93.6deg);
-                        }
+                        /* Light mode removed - only dark mode supported */
                         
                         [data-theme="dark"] {
                             --sl-color-accent-low: oklch(0.2 0.05 93.6deg);
