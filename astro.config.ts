@@ -316,16 +316,19 @@ export default defineConfig({
                         }
                         
                         /* Enhanced table styling for consistent appearance */
+                        .sl-markdown-content {
+                            overflow-x: auto !important;
+                        }
+                        
                         .sl-markdown-content table {
                             width: 100% !important;
-                            max-width: 100% !important;
+                            min-width: 600px !important;
                             table-layout: auto !important;
                             border-collapse: collapse !important;
                             margin: 1.5rem 0 !important;
                             border: 1px solid var(--cyber-border) !important;
                             box-shadow: var(--cyber-glow) !important;
                             display: table !important;
-                            overflow-x: auto !important;
                         }
                         
                         .sl-markdown-content table th {
@@ -375,6 +378,18 @@ export default defineConfig({
                         .sl-markdown-content table th,
                         .sl-markdown-content table td {
                             display: table-cell !important;
+                        }
+                        
+                        /* Responsive table wrapper */
+                        .sl-markdown-content > * {
+                            overflow-x: auto !important;
+                        }
+                        
+                        /* Ensure proper scrolling for wide tables */
+                        @media (max-width: 768px) {
+                            .sl-markdown-content table {
+                                min-width: 500px !important;
+                            }
                         }
                         
                         /* Ensure table header border extends full width */

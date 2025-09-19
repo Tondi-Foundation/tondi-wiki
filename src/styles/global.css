@@ -677,14 +677,20 @@ body {
 /* Enhanced table styling for consistent appearance */
 table {
 	width: 100% !important;
-	max-width: 100% !important;
+	min-width: 600px !important;
 	table-layout: auto !important;
 	border-collapse: collapse !important;
 	margin: 1.5rem 0 !important;
 	border: 1px solid var(--cyber-border) !important;
 	box-shadow: var(--cyber-glow) !important;
 	display: table !important;
+}
+
+/* Table container with horizontal scroll */
+.table-container {
 	overflow-x: auto !important;
+	width: 100% !important;
+	margin: 1.5rem 0 !important;
 }
 
 table th {
