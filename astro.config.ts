@@ -230,12 +230,32 @@ export default defineConfig({
                         /* Expand main content area */
                         .sl-main-pane {
                             max-width: none !important;
+                            width: 100% !important;
                             padding: 0 2rem !important;
                         }
                         
                         .sl-main-pane .sl-markdown-content {
                             max-width: none !important;
+                            width: 100% !important;
                             padding: 0 !important;
+                        }
+                        
+                        /* Force content to use full width */
+                        .sl-main-pane .sl-markdown-content > * {
+                            max-width: none !important;
+                        }
+                        
+                        /* Specific width adjustments for different screen sizes */
+                        @media (min-width: 1200px) {
+                            .sl-main-pane {
+                                padding: 0 4rem !important;
+                            }
+                        }
+                        
+                        @media (min-width: 1600px) {
+                            .sl-main-pane {
+                                padding: 0 6rem !important;
+                            }
                         }
                         
                         .sl-markdown-content::before {
@@ -330,7 +350,7 @@ export default defineConfig({
                         
                         /* Enhanced table styling for consistent appearance */
                         .sl-markdown-content {
-                            overflow-x: auto !important;
+                            overflow-x: visible !important;
                         }
                         
                         .sl-markdown-content table {
