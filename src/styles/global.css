@@ -52,43 +52,10 @@ body {
 	--color-sidebar-ring: var(--sidebar-ring);
 }
 
-:root {
-	--background: oklch(1 0 0);
-	--foreground: oklch(0.145 0 0);
-	--card: oklch(1 0 0);
-	--card-foreground: oklch(0.145 0 0);
-	--popover: oklch(1 0 0);
-	--popover-foreground: oklch(0.145 0 0);
-	--primary: oklch(0.877 0.166 93.6deg);
-	--primary-foreground: oklch(9.69% 0.0000000000000000816 0deg);
-	--secondary: oklch(0.97 0 0);
-	--secondary-foreground: oklch(0.205 0 0);
-	--muted: oklch(0.97 0 0);
-	--muted-foreground: oklch(0.556 0 0);
-	--accent: oklch(0.97 0 0);
-	--accent-foreground: oklch(0.205 0 0);
-	--destructive: oklch(0.577 0.245 27.325);
-	--destructive-foreground: oklch(0.577 0.245 27.325);
-	--border: oklch(0.922 0 0);
-	--input: oklch(0.922 0 0);
-	--ring: oklch(0.708 0 0);
-	--chart-1: oklch(0.646 0.222 41.116);
-	--chart-2: oklch(0.6 0.118 184.704);
-	--chart-3: oklch(0.398 0.07 227.392);
-	--chart-4: oklch(0.828 0.189 84.429);
-	--chart-5: oklch(0.769 0.188 70.08);
-	--radius: 0.625rem;
-	--sidebar: oklch(0.985 0 0);
-	--sidebar-foreground: oklch(0.145 0 0);
-	--sidebar-primary: oklch(0.205 0 0);
-	--sidebar-primary-foreground: oklch(0.985 0 0);
-	--sidebar-accent: oklch(0.97 0 0);
-	--sidebar-accent-foreground: oklch(0.205 0 0);
-	--sidebar-border: oklch(0.922 0 0);
-	--sidebar-ring: oklch(0.708 0 0);
-}
+/* Light mode removed - only dark mode supported */
 
-.dark {
+/* Dark mode colors applied globally - no theme switching */
+:root {
 	--background: oklch(0 0 0);
 	--foreground: oklch(0.985 0 0);
 	--card: oklch(0.1 0 0);
@@ -438,12 +405,12 @@ body {
 	text-shadow: 0 0 20px rgba(250, 204, 21, 0.8), 0 0 30px rgba(250, 204, 21, 0.6);
 }
 
-/* Reduced glow for dark mode */
-.dark .text-glow-effect {
+/* Reduced glow for dark mode - applied globally */
+.text-glow-effect {
 	text-shadow: 0 0 5px rgba(250, 204, 21, 0.3);
 }
 
-.dark .text-glow-effect:hover {
+.text-glow-effect:hover {
 	text-shadow: 0 0 10px rgba(250, 204, 21, 0.5), 0 0 15px rgba(250, 204, 21, 0.3);
 }
 
@@ -498,8 +465,8 @@ body {
 	box-shadow: 0 0 30px rgba(250, 204, 21, 0.4);
 }
 
-/* Reduced glow for dark mode */
-.dark .hover-glow:hover {
+/* Reduced glow for dark mode - applied globally */
+.hover-glow:hover {
 	box-shadow: 0 0 15px rgba(250, 204, 21, 0.2);
 }
 
@@ -606,37 +573,37 @@ body {
 	}
 }
 
-/* Dark mode specific glow adjustments */
-.dark .animate-glow-intense {
+/* Dark mode specific glow adjustments - applied globally */
+.animate-glow-intense {
 	animation: glowIntenseDark 1.5s ease-in-out infinite alternate;
 }
 
-.dark .animate-text-glow {
+.animate-text-glow {
 	animation: textGlowDark 2s ease-in-out infinite alternate;
 }
 
-/* Reduced cyber pulse for dark mode */
-.dark .animate-cyber-pulse {
+/* Reduced cyber pulse for dark mode - applied globally */
+.animate-cyber-pulse {
 	animation: cyberPulseDark 2s ease-in-out infinite;
 }
 
-/* Dark mode heading colors */
-.dark h1,
-.dark h2,
-.dark h3,
-.dark h4,
-.dark h5,
-.dark h6 {
+/* Dark mode heading colors - applied globally */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	color: #fde047 !important;
 	text-shadow: 0 0 8px rgba(253, 224, 71, 0.3) !important;
 }
 
-.dark h1:hover,
-.dark h2:hover,
-.dark h3:hover,
-.dark h4:hover,
-.dark h5:hover,
-.dark h6:hover {
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
 	text-shadow: 0 0 12px rgba(253, 224, 71, 0.5) !important;
 }
 
@@ -815,9 +782,8 @@ table thead th::after {
 	}
 }
 
-/* 關掉點陣背景 */
-.tondi-background::before,
-.dark .tondi-background::before {
+/* 關掉點陣背景 - dark mode only */
+.tondi-background::before {
 	content: none !important;
 	background: none !important;
 }

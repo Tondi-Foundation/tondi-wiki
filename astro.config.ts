@@ -23,7 +23,6 @@ export default defineConfig({
         compressor(),
         starlight({
             title: "Wiki",
-            defaultColorScheme: "dark",
             social: [{ icon: "github", label: "GitHub", href: GITHUB_REPO_URL! }],
             sidebar: [
                 {
@@ -59,14 +58,17 @@ export default defineConfig({
                         body {
                             position: relative;
                         }
-                        /* Light mode background removed */
-                        [data-theme="dark"] body::before {
+                        /* Force dark mode only - no theme switching */
+                        html {
+                            color-scheme: dark !important;
+                        }
+                        
+                        body::before {
                             background-image: radial-gradient(#1a1a1a 0.8px, transparent 0.8px);
                         }
                         
-                        /* Light mode removed - only dark mode supported */
-                        
-                        [data-theme="dark"] {
+                        /* Dark mode colors - applied globally */
+                        :root {
                             --sl-color-accent-low: oklch(0.2 0.05 93.6deg);
                             --sl-color-accent: oklch(0.877 0.166 93.6deg);
                             --sl-color-accent-high: oklch(0.95 0.05 93.6deg);
@@ -111,29 +113,15 @@ export default defineConfig({
                             color: var(--sl-color-accent-hover) !important;
                         }
                         
-                        /* Enhanced Starlight accent colors with cyber theme */
+                        /* Enhanced Starlight accent colors with cyber theme - dark mode only */
                         html {
-                            --sl-color-accent-low: oklch(0.95 0.05 93.6deg) !important;
-                            --sl-color-accent: oklch(0.877 0.166 93.6deg) !important;
-                            --sl-color-accent-high: oklch(0.3 0.1 93.6deg) !important;
-                            --sl-color-text-accent: oklch(0.877 0.166 93.6deg) !important;
-                            --sl-color-text-invert: oklch(0.1 0.05 0deg) !important;
-                            
-                            /* Enhanced cyber-style variables */
-                            --cyber-glow: 0 0 20px rgba(250, 204, 21, 0.3);
-                            --cyber-glow-intense: 0 0 40px rgba(250, 204, 21, 0.5);
-                            --cyber-border: rgba(250, 204, 21, 0.2);
-                            --cyber-bg-overlay: rgba(250, 204, 21, 0.05);
-                        }
-                        
-                        [data-theme="dark"] html {
                             --sl-color-accent-low: oklch(0.2 0.05 93.6deg) !important;
                             --sl-color-accent: oklch(0.877 0.166 93.6deg) !important;
                             --sl-color-accent-high: oklch(0.95 0.05 93.6deg) !important;
                             --sl-color-text-accent: oklch(0.877 0.166 93.6deg) !important;
                             --sl-color-text-invert: oklch(0.1 0.05 0deg) !important;
                             
-                            /* Reduced dark mode cyber variables for subtler glow */
+                            /* Dark mode cyber variables for subtler glow */
                             --cyber-glow: 0 0 15px rgba(250, 204, 21, 0.2);
                             --cyber-glow-intense: 0 0 25px rgba(250, 204, 21, 0.3);
                             --cyber-border: rgba(250, 204, 21, 0.2);
@@ -168,12 +156,12 @@ export default defineConfig({
                             min-width: 320px !important;
                         }
                         
-                        /* Make sidebar darker in dark mode */
-                        [data-theme="dark"] .sl-sidebar {
+                        /* Make sidebar darker - dark mode only */
+                        .sl-sidebar {
                             background-color: oklch(0.05 0 0) !important;
                         }
                         
-                        [data-theme="dark"] .sl-sidebar-content {
+                        .sl-sidebar-content {
                             background-color: oklch(0.05 0 0) !important;
                         }
                         
@@ -307,23 +295,23 @@ export default defineConfig({
                             text-shadow: var(--cyber-glow) !important;
                         }
                         
-                        /* Dark mode heading colors */
-                        [data-theme="dark"] .sl-markdown-content h1,
-                        [data-theme="dark"] .sl-markdown-content h2,
-                        [data-theme="dark"] .sl-markdown-content h3,
-                        [data-theme="dark"] .sl-markdown-content h4,
-                        [data-theme="dark"] .sl-markdown-content h5,
-                        [data-theme="dark"] .sl-markdown-content h6 {
+                        /* Dark mode heading colors - applied globally */
+                        .sl-markdown-content h1,
+                        .sl-markdown-content h2,
+                        .sl-markdown-content h3,
+                        .sl-markdown-content h4,
+                        .sl-markdown-content h5,
+                        .sl-markdown-content h6 {
                             color: #fde047 !important;
                             text-shadow: 0 0 8px rgba(253, 224, 71, 0.3) !important;
                         }
                         
-                        [data-theme="dark"] .sl-markdown-content h1:hover,
-                        [data-theme="dark"] .sl-markdown-content h2:hover,
-                        [data-theme="dark"] .sl-markdown-content h3:hover,
-                        [data-theme="dark"] .sl-markdown-content h4:hover,
-                        [data-theme="dark"] .sl-markdown-content h5:hover,
-                        [data-theme="dark"] .sl-markdown-content h6:hover {
+                        .sl-markdown-content h1:hover,
+                        .sl-markdown-content h2:hover,
+                        .sl-markdown-content h3:hover,
+                        .sl-markdown-content h4:hover,
+                        .sl-markdown-content h5:hover,
+                        .sl-markdown-content h6:hover {
                             text-shadow: 0 0 12px rgba(253, 224, 71, 0.5) !important;
                         }
                         
