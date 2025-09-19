@@ -51,7 +51,6 @@ export default {
         'matrix-rain': 'matrixRain 2s linear infinite',
         'cyber-pulse': 'cyberPulse 2s ease-in-out infinite',
         'neon-flicker': 'neonFlicker 3s ease-in-out infinite',
-        'particle-float': 'particleFloat 8s ease-in-out infinite',
         'text-glow': 'textGlow 2s ease-in-out infinite alternate',
         'text-glow-dark': 'textGlowDark 2s ease-in-out infinite alternate',
       },
@@ -108,12 +107,6 @@ export default {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.8' },
           '25%, 75%': { opacity: '0.9' },
-        },
-        particleFloat: {
-          '0%, 100%': { transform: 'translateY(0px) translateX(0px) rotate(0deg)' },
-          '25%': { transform: 'translateY(-20px) translateX(10px) rotate(90deg)' },
-          '50%': { transform: 'translateY(-10px) translateX(-5px) rotate(180deg)' },
-          '75%': { transform: 'translateY(-30px) translateX(15px) rotate(270deg)' },
         },
         textGlow: {
           '0%': { 
