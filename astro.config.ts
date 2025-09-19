@@ -5,7 +5,7 @@ import compressor from "astro-compressor";
 import { loadEnv } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 
-const { PUBLIC_SITE_URL, GITHUB_REPO_URL } = loadEnv(process.env.NODE_ENV!, process.cwd(), "");
+const { PUBLIC_SITE_URL, GITHUB_REPO_URL } = loadEnv(process.env['NODE_ENV']!, process.cwd(), "");
 
 // https://astro.build/config
 export default defineConfig({
@@ -132,13 +132,19 @@ export default defineConfig({
                             color: var(--sl-color-accent-hover) !important;
                         }
                         
-                        /* Override Starlight's default accent colors */
+                        /* Enhanced Starlight accent colors with cyber theme */
                         html {
                             --sl-color-accent-low: oklch(0.95 0.05 93.6deg) !important;
                             --sl-color-accent: oklch(0.877 0.166 93.6deg) !important;
                             --sl-color-accent-high: oklch(0.3 0.1 93.6deg) !important;
                             --sl-color-text-accent: oklch(0.877 0.166 93.6deg) !important;
                             --sl-color-text-invert: oklch(0.1 0.05 0deg) !important;
+                            
+                            /* Enhanced cyber-style variables */
+                            --cyber-glow: 0 0 20px rgba(250, 204, 21, 0.3);
+                            --cyber-glow-intense: 0 0 40px rgba(250, 204, 21, 0.5);
+                            --cyber-border: rgba(250, 204, 21, 0.2);
+                            --cyber-bg-overlay: rgba(250, 204, 21, 0.05);
                         }
                         
                         [data-theme="dark"] html {
@@ -147,6 +153,12 @@ export default defineConfig({
                             --sl-color-accent-high: oklch(0.95 0.05 93.6deg) !important;
                             --sl-color-text-accent: oklch(0.877 0.166 93.6deg) !important;
                             --sl-color-text-invert: oklch(0.1 0.05 0deg) !important;
+                            
+                            /* Enhanced dark mode cyber variables */
+                            --cyber-glow: 0 0 30px rgba(250, 204, 21, 0.4);
+                            --cyber-glow-intense: 0 0 60px rgba(250, 204, 21, 0.6);
+                            --cyber-border: rgba(250, 204, 21, 0.3);
+                            --cyber-bg-overlay: rgba(250, 204, 21, 0.08);
                         }
                         
                         /* Fix selected/active states for better readability */
@@ -207,6 +219,81 @@ export default defineConfig({
                             color: var(--sl-color-text-invert) !important;
                             background-color: var(--sl-color-accent) !important;
                         }
+                        
+                        /* Enhanced Starlight components with cyber styling */
+                        .sl-markdown-content {
+                            position: relative;
+                        }
+                        
+                        .sl-markdown-content::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            height: 1px;
+                            background: linear-gradient(90deg, transparent, var(--cyber-border), transparent);
+                            opacity: 0.3;
+                        }
+                        
+                        /* Enhanced code blocks */
+                        .sl-markdown-content pre {
+                            border: 1px solid var(--cyber-border) !important;
+                            box-shadow: var(--cyber-glow) !important;
+                            transition: box-shadow 0.3s ease !important;
+                        }
+                        
+                        .sl-markdown-content pre:hover {
+                            box-shadow: var(--cyber-glow-intense) !important;
+                        }
+                        
+                        /* Enhanced blockquotes */
+                        .sl-markdown-content blockquote {
+                            border-left: 4px solid var(--sl-color-accent) !important;
+                            background: var(--cyber-bg-overlay) !important;
+                            box-shadow: var(--cyber-glow) !important;
+                        }
+                        
+                        /* Enhanced tables */
+                        .sl-markdown-content table {
+                            border: 1px solid var(--cyber-border) !important;
+                            box-shadow: var(--cyber-glow) !important;
+                        }
+                        
+                        .sl-markdown-content th {
+                            background: var(--cyber-bg-overlay) !important;
+                            border-bottom: 2px solid var(--sl-color-accent) !important;
+                        }
+                        
+                        /* Enhanced search */
+                        .sl-search {
+                            border: 1px solid var(--cyber-border) !important;
+                            box-shadow: var(--cyber-glow) !important;
+                        }
+                        
+                        .sl-search:focus {
+                            box-shadow: var(--cyber-glow-intense) !important;
+                        }
+                        
+                        /* Enhanced pagination */
+                        .sl-pagination a {
+                            border: 1px solid var(--cyber-border) !important;
+                            transition: all 0.3s ease !important;
+                        }
+                        
+                        .sl-pagination a:hover {
+                            box-shadow: var(--cyber-glow) !important;
+                            transform: translateY(-2px) !important;
+                        }
+                        
+                        /* Enhanced breadcrumbs */
+                        .sl-breadcrumb a {
+                            transition: color 0.3s ease !important;
+                        }
+                        
+                        .sl-breadcrumb a:hover {
+                            text-shadow: var(--cyber-glow) !important;
+                        }
                     `,
                 },
             ],
@@ -218,7 +305,7 @@ export default defineConfig({
         preserveScriptOrder: true,
     },
     vite: {
-        plugins: [tailwindcss()],
+        plugins: [tailwindcss()] as any,
         css: {
             transformer: "lightningcss",
         },

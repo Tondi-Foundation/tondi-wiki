@@ -3,9 +3,117 @@ import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout>
-    <main class="w-full h-full">
-        <div class="h-full flex items-center justify-center">
-            <h1 class="font-bold text-2xl">Tondi Wiki</h1>
+    <main class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Advanced Background Elements -->
+        <div class="absolute inset-0">
+            <!-- Cyber Grid -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="w-full h-full" style="background-image: linear-gradient(rgba(250, 204, 21, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(250, 204, 21, 0.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
+            </div>
+            
+            <!-- Floating Cyber Shapes -->
+            <div class="absolute top-20 left-10 w-40 h-40 border border-primary-400/15 rounded-full animate-particle-float"></div>
+            <div class="absolute top-40 right-20 w-32 h-32 border border-primary-300/20 rounded-lg rotate-45 animate-particle-float" style="animation-delay: -2s;"></div>
+            <div class="absolute bottom-40 left-20 w-48 h-48 border border-primary-500/10 rounded-full animate-particle-float" style="animation-delay: -4s;"></div>
+            <div class="absolute bottom-20 right-10 w-24 h-24 border border-primary-400/25 rounded-lg rotate-12 animate-particle-float" style="animation-delay: -6s;"></div>
+            
+            <!-- Rotating Hexagons -->
+            <div class="absolute top-1/3 left-1/4 w-16 h-16 border border-primary-400/20 rounded-lg animate-rotate-slow opacity-30"></div>
+            <div class="absolute bottom-1/3 right-1/4 w-12 h-12 border border-primary-300/25 rounded-full animate-rotate-slow opacity-25" style="animation-direction: reverse;"></div>
+            
+            <!-- Cyber Pulse Rings -->
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-primary-400/5 rounded-full animate-cyber-pulse"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 border border-primary-300/8 rounded-full animate-cyber-pulse" style="animation-delay: -1s;"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Main Content -->
+            <div class="space-y-12">
+                <!-- Enhanced Cyber Badge -->
+                <div class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-400/10 to-primary-500/10 border border-primary-400/30 rounded-full text-primary-400 text-sm font-bold backdrop-blur-md hover:animate-glow-intense transition-all duration-500 group cursor-pointer hover-lift hover-glow">
+                    <div class="w-3 h-3 bg-primary-400 rounded-full mr-3 animate-cyber-pulse group-hover:animate-glow-intense shadow-lg shadow-primary-400/50"></div>
+                    <span class="group-hover:animate-text-glow text-glow-effect">下一代高性能区块链技术文档</span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary-400/5 to-primary-500/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                
+                <!-- Enhanced Main Headline -->
+                <h1 class="text-6xl md:text-8xl font-black text-white leading-tight">
+                    <span class="block animate-fade-in text-glow-effect">TONDI</span>
+                    <span class="block bg-gradient-to-r from-primary-400 via-primary-300 to-primary-500 bg-clip-text text-transparent animate-text-glow">
+                        WIKI
+                    </span>
+                    <span class="block text-4xl md:text-6xl font-bold text-gray-300 animate-slide-up">
+                        技术文档
+                    </span>
+                </h1>
+                
+                <!-- Enhanced Cyber Subtitle -->
+                <p class="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed animate-fade-in">
+                    探索前所未有的区块链性能：
+                    <span class="text-primary-400 font-bold hover:animate-text-glow transition-all duration-500 cursor-pointer text-glow-effect hover-lift">20,000+ TPS</span>，
+                    <span class="text-primary-400 font-bold hover:animate-text-glow transition-all duration-500 cursor-pointer text-glow-effect hover-lift">亚秒级最终确认</span>，
+                    完全兼容 <span class="text-primary-400 font-bold hover:animate-text-glow transition-all duration-500 cursor-pointer text-glow-effect hover-lift">Taproot</span>
+                </p>
+                
+                <!-- Enhanced Cyber Performance Metrics -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mt-16">
+                    <div class="cyber-card group bg-gradient-to-br from-dark-800/60 to-dark-700/60 backdrop-blur-md border border-primary-400/20 rounded-3xl p-8 hover:border-primary-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-400/20 hover:-translate-y-4 hover:scale-105 hover-glow animate-scale-in">
+                        <div class="text-5xl font-black text-primary-400 mb-4 group-hover:animate-text-glow transition-all duration-300 text-glow-effect">20,000+</div>
+                        <div class="text-xl font-bold text-gray-300 mb-2">TPS</div>
+                        <div class="text-sm text-gray-400 group-hover:text-primary-300 transition-colors duration-300">超高吞吐量</div>
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-400/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute top-4 right-4 w-2 h-2 bg-primary-400 rounded-full animate-cyber-pulse opacity-60"></div>
+                    </div>
+                    <div class="cyber-card group bg-gradient-to-br from-dark-800/60 to-dark-700/60 backdrop-blur-md border border-primary-400/20 rounded-3xl p-8 hover:border-primary-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-400/20 hover:-translate-y-4 hover:scale-105 hover-glow animate-scale-in" style="animation-delay: 0.2s;">
+                        <div class="text-5xl font-black text-primary-400 mb-4 group-hover:animate-text-glow transition-all duration-300 text-glow-effect">&lt;1s</div>
+                        <div class="text-xl font-bold text-gray-300 mb-2">最终确认</div>
+                        <div class="text-sm text-gray-400 group-hover:text-primary-300 transition-colors duration-300">亚秒级确认</div>
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-400/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute top-4 right-4 w-2 h-2 bg-primary-400 rounded-full animate-cyber-pulse opacity-60" style="animation-delay: -0.5s;"></div>
+                    </div>
+                    <div class="cyber-card group bg-gradient-to-br from-dark-800/60 to-dark-700/60 backdrop-blur-md border border-primary-400/20 rounded-3xl p-8 hover:border-primary-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-400/20 hover:-translate-y-4 hover:scale-105 hover-glow animate-scale-in" style="animation-delay: 0.4s;">
+                        <div class="text-5xl font-black text-primary-400 mb-4 group-hover:animate-text-glow transition-all duration-300 text-glow-effect">TAPROOT</div>
+                        <div class="text-xl font-bold text-gray-300 mb-2">兼容</div>
+                        <div class="text-sm text-gray-400 group-hover:text-primary-300 transition-colors duration-300">智能合约就绪</div>
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-400/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute top-4 right-4 w-2 h-2 bg-primary-400 rounded-full animate-cyber-pulse opacity-60" style="animation-delay: -1s;"></div>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Cyber CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mt-16">
+                    <a href="/guides/intro" class="cyber-button-primary group relative px-12 py-6 bg-gradient-to-r from-primary-400 to-primary-500 hover:from-primary-300 hover:to-primary-400 text-dark-900 font-black text-lg rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-primary-400/50 hover:scale-110 overflow-hidden hover-lift">
+                        <span class="relative z-10 group-hover:animate-text-glow text-glow-effect">开始阅读</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary-300 to-primary-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                        <div class="absolute top-2 right-2 w-2 h-2 bg-white/30 rounded-full animate-cyber-pulse opacity-60"></div>
+                    </a>
+                    
+                    <a href="/guides/timeline" class="cyber-button-secondary group relative px-12 py-6 border-2 border-primary-400 text-primary-400 hover:bg-primary-400 hover:text-dark-900 font-black text-lg rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-primary-400/50 hover:scale-110 overflow-hidden hover-lift">
+                        <span class="relative z-10 group-hover:animate-text-glow text-glow-effect">技术路线图</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary-400/10 to-primary-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute top-2 right-2 w-2 h-2 bg-primary-400/50 rounded-full animate-cyber-pulse opacity-60"></div>
+                    </a>
+                    
+                    <a href="/tondi-standard-proposal" class="cyber-button-ghost group px-12 py-6 text-gray-300 hover:text-primary-400 font-bold text-lg rounded-2xl transition-all duration-500 flex items-center space-x-3 hover:animate-neon-flicker hover-lift">
+                        <span class="group-hover:animate-text-glow text-glow-effect">标准提案</span>
+                        <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        <div class="absolute top-2 right-2 w-2 h-2 bg-primary-400/30 rounded-full animate-cyber-pulse opacity-60"></div>
+                    </a>
+                </div>
+                
+                <!-- Enhanced Cyber Scroll Indicator -->
+                <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce group cursor-pointer hover-lift">
+                    <div class="w-8 h-12 border-2 border-primary-400 rounded-full flex justify-center group-hover:animate-glow-intense transition-all duration-300 hover-glow">
+                        <div class="w-2 h-4 bg-primary-400 rounded-full mt-2 animate-cyber-pulse group-hover:animate-glow-intense shadow-lg shadow-primary-400/50"></div>
+                    </div>
+                    <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-primary-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-fade-in">
+                        向下滚动
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </Layout>
