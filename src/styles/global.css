@@ -723,6 +723,12 @@ table {
 	display: table !important;
 }
 
+/* Prevent vertical scrolling on headings */
+h1, h2, h3, h4, h5, h6 {
+	overflow: visible !important;
+	white-space: normal !important;
+}
+
 /* Table container with horizontal scroll */
 .table-container {
 	overflow-x: auto !important;

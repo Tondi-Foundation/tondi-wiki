@@ -350,7 +350,19 @@ export default defineConfig({
                         
                         /* Enhanced table styling for consistent appearance */
                         .sl-markdown-content {
-                            overflow-x: visible !important;
+                            overflow-x: auto !important;
+                            overflow-y: visible !important;
+                        }
+                        
+                        /* Prevent vertical scrolling on headings */
+                        .sl-markdown-content h1,
+                        .sl-markdown-content h2,
+                        .sl-markdown-content h3,
+                        .sl-markdown-content h4,
+                        .sl-markdown-content h5,
+                        .sl-markdown-content h6 {
+                            overflow: visible !important;
+                            white-space: normal !important;
                         }
                         
                         .sl-markdown-content table {
