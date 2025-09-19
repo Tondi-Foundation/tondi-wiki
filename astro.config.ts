@@ -294,6 +294,49 @@ export default defineConfig({
                         .sl-breadcrumb a:hover {
                             text-shadow: var(--cyber-glow) !important;
                         }
+                        
+                        /* Enhanced table styling for consistent appearance */
+                        .sl-markdown-content table {
+                            width: 100% !important;
+                            table-layout: fixed !important;
+                            border-collapse: collapse !important;
+                            margin: 1.5rem 0 !important;
+                        }
+                        
+                        .sl-markdown-content table th {
+                            width: auto !important;
+                            text-align: left !important;
+                            padding: 0.75rem 1rem !important;
+                            border-bottom: 2px solid var(--sl-color-accent) !important;
+                            background: var(--cyber-bg-overlay) !important;
+                            font-weight: 600 !important;
+                        }
+                        
+                        .sl-markdown-content table td {
+                            padding: 0.75rem 1rem !important;
+                            border-bottom: 1px solid var(--cyber-border) !important;
+                            vertical-align: top !important;
+                        }
+                        
+                        .sl-markdown-content table tr:hover {
+                            background: var(--cyber-bg-overlay) !important;
+                        }
+                        
+                        /* Ensure table header border extends full width */
+                        .sl-markdown-content table thead th {
+                            position: relative !important;
+                        }
+                        
+                        .sl-markdown-content table thead th::after {
+                            content: '' !important;
+                            position: absolute !important;
+                            bottom: -2px !important;
+                            left: 0 !important;
+                            right: 0 !important;
+                            height: 2px !important;
+                            background: var(--sl-color-accent) !important;
+                            box-shadow: var(--cyber-glow) !important;
+                        }
                     `,
                 },
             ],
