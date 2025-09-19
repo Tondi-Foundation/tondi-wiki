@@ -362,19 +362,7 @@ body {
 	position: relative;
 }
 
-.tondi-background::before {
-	content: '';
-	position: absolute;
-	inset: 0;
-	background-size: 10px 10px;
-	background-image: radial-gradient(#FCF8E8 3px, transparent 1px);
-	pointer-events: none;
-	z-index: -1;
-}
-
-.dark .tondi-background::before {
-	background-image: radial-gradient(#1a1a1a 1px, transparent 1px);
-}
+/* .tondi-background::before - removed dot pattern */
 
 /* Enhanced cyber-style components */
 .cyber-card {
