@@ -450,6 +450,15 @@ body {
 	text-shadow: 0 0 20px rgba(250, 204, 21, 0.8), 0 0 30px rgba(250, 204, 21, 0.6);
 }
 
+/* Reduced glow for dark mode */
+.dark .text-glow-effect {
+	text-shadow: 0 0 5px rgba(250, 204, 21, 0.3);
+}
+
+.dark .text-glow-effect:hover {
+	text-shadow: 0 0 10px rgba(250, 204, 21, 0.5), 0 0 15px rgba(250, 204, 21, 0.3);
+}
+
 /* Cyber grid background */
 .cyber-grid {
 	background-image: 
@@ -512,6 +521,11 @@ body {
 
 .hover-glow:hover {
 	box-shadow: 0 0 30px rgba(250, 204, 21, 0.4);
+}
+
+/* Reduced glow for dark mode */
+.dark .hover-glow:hover {
+	box-shadow: 0 0 15px rgba(250, 204, 21, 0.2);
 }
 
 /* Gradient overlays */
@@ -614,6 +628,29 @@ body {
 	
 	.geometric-shape {
 		display: none;
+	}
+}
+
+/* Dark mode specific glow adjustments */
+.dark .animate-glow-intense {
+	animation: glowIntenseDark 1.5s ease-in-out infinite alternate;
+}
+
+.dark .animate-text-glow {
+	animation: textGlowDark 2s ease-in-out infinite alternate;
+}
+
+/* Reduced cyber pulse for dark mode */
+.dark .animate-cyber-pulse {
+	animation: cyberPulseDark 2s ease-in-out infinite;
+}
+
+@keyframes cyberPulseDark {
+	0%, 100% { 
+		boxShadow: '0 0 3px #facc15, 0 0 6px #facc15, 0 0 9px #facc15, inset 0 0 3px #facc15' 
+	}
+	50% { 
+		boxShadow: '0 0 8px #facc15, 0 0 12px #facc15, 0 0 16px #facc15, inset 0 0 8px #facc15' 
 	}
 }
 

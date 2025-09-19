@@ -41,6 +41,7 @@ export default {
         'bounce-slow': 'bounce 2s infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
         'glow-intense': 'glowIntense 1.5s ease-in-out infinite alternate',
+        'glow-intense-dark': 'glowIntenseDark 1.5s ease-in-out infinite alternate',
         'float': 'float 6s ease-in-out infinite',
         'float-fast': 'floatFast 3s ease-in-out infinite',
         'slide-up': 'slideUp 0.8s ease-out',
@@ -52,6 +53,7 @@ export default {
         'neon-flicker': 'neonFlicker 3s ease-in-out infinite',
         'particle-float': 'particleFloat 8s ease-in-out infinite',
         'text-glow': 'textGlow 2s ease-in-out infinite alternate',
+        'text-glow-dark': 'textGlowDark 2s ease-in-out infinite alternate',
       },
       keyframes: {
         glow: {
@@ -61,6 +63,10 @@ export default {
         glowIntense: {
           '0%': { boxShadow: '0 0 10px #facc15, 0 0 20px #facc15, 0 0 30px #facc15, 0 0 40px #facc15' },
           '100%': { boxShadow: '0 0 20px #facc15, 0 0 40px #facc15, 0 0 60px #facc15, 0 0 80px #facc15' },
+        },
+        glowIntenseDark: {
+          '0%': { boxShadow: '0 0 5px #facc15, 0 0 10px #facc15, 0 0 15px #facc15, 0 0 20px #facc15' },
+          '100%': { boxShadow: '0 0 10px #facc15, 0 0 20px #facc15, 0 0 30px #facc15, 0 0 40px #facc15' },
         },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
@@ -117,6 +123,16 @@ export default {
           '100%': { 
             textShadow: '0 0 10px #facc15, 0 0 20px #facc15, 0 0 30px #facc15, 0 0 40px #facc15',
             filter: 'brightness(1.2)'
+          },
+        },
+        textGlowDark: {
+          '0%': { 
+            textShadow: '0 0 3px #facc15, 0 0 6px #facc15, 0 0 9px #facc15',
+            filter: 'brightness(1)'
+          },
+          '100%': { 
+            textShadow: '0 0 6px #facc15, 0 0 12px #facc15, 0 0 18px #facc15, 0 0 24px #facc15',
+            filter: 'brightness(1.1)'
           },
         },
       },

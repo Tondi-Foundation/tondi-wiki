@@ -154,11 +154,11 @@ export default defineConfig({
                             --sl-color-text-accent: oklch(0.877 0.166 93.6deg) !important;
                             --sl-color-text-invert: oklch(0.1 0.05 0deg) !important;
                             
-                            /* Enhanced dark mode cyber variables */
-                            --cyber-glow: 0 0 30px rgba(250, 204, 21, 0.4);
-                            --cyber-glow-intense: 0 0 60px rgba(250, 204, 21, 0.6);
-                            --cyber-border: rgba(250, 204, 21, 0.3);
-                            --cyber-bg-overlay: rgba(250, 204, 21, 0.08);
+                            /* Reduced dark mode cyber variables for subtler glow */
+                            --cyber-glow: 0 0 15px rgba(250, 204, 21, 0.2);
+                            --cyber-glow-intense: 0 0 25px rgba(250, 204, 21, 0.3);
+                            --cyber-border: rgba(250, 204, 21, 0.2);
+                            --cyber-bg-overlay: rgba(250, 204, 21, 0.05);
                         }
                         
                         /* Fix selected/active states for better readability */
