@@ -298,9 +298,12 @@ export default defineConfig({
                         /* Enhanced table styling for consistent appearance */
                         .sl-markdown-content table {
                             width: 100% !important;
-                            table-layout: fixed !important;
+                            table-layout: auto !important;
                             border-collapse: collapse !important;
                             margin: 1.5rem 0 !important;
+                            border: 1px solid var(--cyber-border) !important;
+                            box-shadow: var(--cyber-glow) !important;
+                            display: table !important;
                         }
                         
                         .sl-markdown-content table th {
@@ -310,23 +313,49 @@ export default defineConfig({
                             border-bottom: 2px solid var(--sl-color-accent) !important;
                             background: var(--cyber-bg-overlay) !important;
                             font-weight: 600 !important;
+                            position: relative !important;
+                            min-width: 0 !important;
                         }
                         
                         .sl-markdown-content table td {
                             padding: 0.75rem 1rem !important;
                             border-bottom: 1px solid var(--cyber-border) !important;
                             vertical-align: top !important;
+                            min-width: 0 !important;
                         }
                         
                         .sl-markdown-content table tr:hover {
                             background: var(--cyber-bg-overlay) !important;
                         }
                         
-                        /* Ensure table header border extends full width */
-                        .sl-markdown-content table thead th {
-                            position: relative !important;
+                        /* Force table to take full width */
+                        .sl-markdown-content table,
+                        .sl-markdown-content table tbody,
+                        .sl-markdown-content table thead,
+                        .sl-markdown-content table tr {
+                            width: 100% !important;
+                            display: table !important;
                         }
                         
+                        .sl-markdown-content table tbody,
+                        .sl-markdown-content table thead {
+                            display: table-header-group !important;
+                        }
+                        
+                        .sl-markdown-content table tbody {
+                            display: table-row-group !important;
+                        }
+                        
+                        .sl-markdown-content table tr {
+                            display: table-row !important;
+                        }
+                        
+                        .sl-markdown-content table th,
+                        .sl-markdown-content table td {
+                            display: table-cell !important;
+                        }
+                        
+                        /* Ensure table header border extends full width */
                         .sl-markdown-content table thead th::after {
                             content: '' !important;
                             position: absolute !important;
@@ -336,6 +365,7 @@ export default defineConfig({
                             height: 2px !important;
                             background: var(--sl-color-accent) !important;
                             box-shadow: var(--cyber-glow) !important;
+                            z-index: 1 !important;
                         }
                     `,
                 },
