@@ -645,6 +645,26 @@ body {
 	animation: cyberPulseDark 2s ease-in-out infinite;
 }
 
+/* Dark mode heading colors */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+	color: #facc15 !important;
+	text-shadow: 0 0 8px rgba(250, 204, 21, 0.3) !important;
+}
+
+.dark h1:hover,
+.dark h2:hover,
+.dark h3:hover,
+.dark h4:hover,
+.dark h5:hover,
+.dark h6:hover {
+	text-shadow: 0 0 12px rgba(250, 204, 21, 0.5) !important;
+}
+
 @keyframes cyberPulseDark {
 	0%, 100% { 
 		boxShadow: '0 0 3px #facc15, 0 0 6px #facc15, 0 0 9px #facc15, inset 0 0 3px #facc15' 

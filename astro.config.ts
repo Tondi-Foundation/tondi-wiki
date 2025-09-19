@@ -295,6 +295,26 @@ export default defineConfig({
                             text-shadow: var(--cyber-glow) !important;
                         }
                         
+                        /* Dark mode heading colors */
+                        [data-theme="dark"] .sl-markdown-content h1,
+                        [data-theme="dark"] .sl-markdown-content h2,
+                        [data-theme="dark"] .sl-markdown-content h3,
+                        [data-theme="dark"] .sl-markdown-content h4,
+                        [data-theme="dark"] .sl-markdown-content h5,
+                        [data-theme="dark"] .sl-markdown-content h6 {
+                            color: #facc15 !important;
+                            text-shadow: 0 0 8px rgba(250, 204, 21, 0.3) !important;
+                        }
+                        
+                        [data-theme="dark"] .sl-markdown-content h1:hover,
+                        [data-theme="dark"] .sl-markdown-content h2:hover,
+                        [data-theme="dark"] .sl-markdown-content h3:hover,
+                        [data-theme="dark"] .sl-markdown-content h4:hover,
+                        [data-theme="dark"] .sl-markdown-content h5:hover,
+                        [data-theme="dark"] .sl-markdown-content h6:hover {
+                            text-shadow: 0 0 12px rgba(250, 204, 21, 0.5) !important;
+                        }
+                        
                         /* Enhanced table styling for consistent appearance */
                         .sl-markdown-content table {
                             width: 100% !important;
