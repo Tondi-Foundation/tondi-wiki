@@ -827,6 +827,18 @@ table thead th::after {
 	}
 }
 
+/* 關掉點陣背景 */
+.tondi-background::before,
+.dark .tondi-background::before {
+	content: none !important;
+	background: none !important;
+}
+
+/* 關掉網格線背景 */
+.cyber-grid { 
+	background-image: none !important; 
+}
+
 /* Print styles */
 @media print {
 	.cyber-grid,
