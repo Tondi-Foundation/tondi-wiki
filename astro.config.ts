@@ -354,27 +354,49 @@ export default defineConfig({
                             overflow-y: visible !important;
                         }
                         
-                        /* Table-specific horizontal scroll */
+                        /* 1) 让 table 恢复为正常元素（不作为滚动容器） */
                         .sl-markdown-content table {
-                            overflow-x: auto !important;
-                            display: block !important;
-                            width: 100% !important;
-                            white-space: nowrap !important;
-                        }
-                        
-                        .sl-markdown-content table thead,
-                        .sl-markdown-content table tbody,
-                        .sl-markdown-content table tr {
                             display: table !important;
                             width: 100% !important;
-                            table-layout: auto !important;
+                            border-collapse: collapse !important;
+                            overflow: visible !important;        /* 关键：不要在 table 上做滚动容器 */
+                            white-space: normal !important;       /* 取消 nowrap，避免强制横向滚动 */
+                            table-layout: fixed !important;       /* 等比伸展列 */
                         }
                         
+                        /* 2) 恢复语义化子元素的 display，避免布局怪异 */
+                        .sl-markdown-content table thead { display: table-header-group !important; }
+                        .sl-markdown-content table tbody { display: table-row-group !important; }
+                        .sl-markdown-content table tr    { display: table-row !important; }
                         .sl-markdown-content table th,
-                        .sl-markdown-content table td {
-                            display: table-cell !important;
-                            white-space: normal !important;
-                            min-width: 120px !important;
+                        .sl-markdown-content table td    { display: table-cell !important; }
+                        
+                        /* 3) 把横向滚动交给外层容器（如果需要横向滚动） */
+                        .sl-markdown-content .table-container {
+                            overflow-x: auto !important;
+                            overflow-y: visible !important;
+                            -webkit-overflow-scrolling: touch;
+                            width: 100% !important;
+                        }
+                        .sl-markdown-content .table-container table {
+                            min-width: 640px; /* 需要更宽就调这个值 */
+                        }
+                        
+                        /* 4) 表头那条"黄线"不拦截鼠标事件 */
+                        .sl-markdown-content table thead th {
+                            position: relative !important;
+                        }
+                        .sl-markdown-content table thead th::after {
+                            pointer-events: none;                 /* 避免伪元素吃掉滚轮/选择等事件 */
+                        }
+                        
+                        /* 可选：只在小屏时允许横向滚动，桌面端保持正常换行 */
+                        @media (max-width: 768px) {
+                            .sl-markdown-content .table-container { overflow-x: auto !important; }
+                            .sl-markdown-content table { white-space: nowrap !important; }
+                        }
+                        @media (min-width: 769px) {
+                            .sl-markdown-content table { white-space: normal !important; }
                         }
                         
                         .sl-markdown-content table {
