@@ -321,8 +321,8 @@ export default defineConfig({
                         }
                         
                         .sl-markdown-content table {
-                            width: 100% !important;
-                            min-width: 600px !important;
+                            width: auto !important;
+                            min-width: 100% !important;
                             table-layout: auto !important;
                             border-collapse: collapse !important;
                             margin: 1.5rem 0 !important;
@@ -351,33 +351,6 @@ export default defineConfig({
                         
                         .sl-markdown-content table tr:hover {
                             background: var(--cyber-bg-overlay) !important;
-                        }
-                        
-                        /* Force table to take full width */
-                        .sl-markdown-content table,
-                        .sl-markdown-content table tbody,
-                        .sl-markdown-content table thead,
-                        .sl-markdown-content table tr {
-                            width: 100% !important;
-                            display: table !important;
-                        }
-                        
-                        .sl-markdown-content table tbody,
-                        .sl-markdown-content table thead {
-                            display: table-header-group !important;
-                        }
-                        
-                        .sl-markdown-content table tbody {
-                            display: table-row-group !important;
-                        }
-                        
-                        .sl-markdown-content table tr {
-                            display: table-row !important;
-                        }
-                        
-                        .sl-markdown-content table th,
-                        .sl-markdown-content table td {
-                            display: table-cell !important;
                         }
                         
                         /* Responsive table wrapper */
