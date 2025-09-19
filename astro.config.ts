@@ -406,9 +406,18 @@ export default defineConfig({
                             background: var(--cyber-bg-overlay) !important;
                         }
                         
-                        /* Responsive table wrapper */
-                        .sl-markdown-content > * {
-                            overflow-x: auto !important;
+                        /* Prevent heading scroll issues */
+                        .sl-markdown-content h1,
+                        .sl-markdown-content h2,
+                        .sl-markdown-content h3,
+                        .sl-markdown-content h4,
+                        .sl-markdown-content h5,
+                        .sl-markdown-content h6 {
+                            overflow: visible !important;
+                            overflow-x: visible !important;
+                            overflow-y: visible !important;
+                            white-space: normal !important;
+                            word-wrap: break-word !important;
                         }
                         
                         /* Ensure proper scrolling for wide tables */
